@@ -62,7 +62,7 @@ function VehicleProfileCarousel(props) {
   
 
   useEffect(() => {
-    axios.get(`http://localhost:8001/api/car_images/listing/${props.data.id}`).then(res => {
+    axios.get(`http://localhost:8501/api/car_images/listing/${props.data.id}`).then(res => {
       console.log("images: ", res.data);
       setImagesArr(res.data);
     

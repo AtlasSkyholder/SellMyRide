@@ -78,7 +78,7 @@ function VehicleListing(props) {
       };
     }
 
-    axios.get("http://localhost:8001/api/makeModel/make").then(res => {
+    axios.get("http://localhost:8501/api/makeModel/make").then(res => {
       setMakeArr(res.data.map(listing => listing.make));
     });
 
