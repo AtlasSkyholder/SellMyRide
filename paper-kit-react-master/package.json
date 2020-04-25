@@ -2,7 +2,7 @@
   "name": "paper-kit-react",
   "version": "1.0.0",
   "private": true,
-  "proxy": "http://localhost:8001",
+  "proxy": "http://localhost:8501",
   "dependencies": {
     "axios": "^0.19.0",
     "bcrypt": "^3.0.7",
@@ -30,7 +30,7 @@
     "reactstrap": "8.0.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=8500 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

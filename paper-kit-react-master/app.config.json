@@ -1,0 +1,10 @@
+{
+  "apps" : [
+    {
+      "name"      : "paper-kit-react-master",
+      "script"    : "npx",
+      "interpreter": "none",
+      "args": "npm start"
+    }
+  ]
+}
