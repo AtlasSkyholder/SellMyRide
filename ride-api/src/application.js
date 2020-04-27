@@ -21,9 +21,6 @@ const users = require("./routes/users");
 const makeModel = require("./routes/makeModel");
 ////////////////////////////////////
 
-const days = require("./routes/days");
-const appointments = require("./routes/appointments");
-const interviewers = require("./routes/interviewers");
 
 function read(file) {
   return new Promise((resolve, reject) => {
@@ -41,16 +38,12 @@ function read(file) {
 }
 
 module.exports = function application(
-  ENV,
-  actions = { updateAppointment: () => {} }
+  ENV
 ) {
   app.use(cors());
   app.use(helmet());
   app.use(bodyparser.json());
 
-  app.use("/api", days(db));
-  app.use("/api", appointments(db, actions.updateAppointment));
-  app.use("/api", interviewers(db));
 
   // paths for sellmyride
   ////////////////////////////////////////
